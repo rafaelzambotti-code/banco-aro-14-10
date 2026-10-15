@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<!-- Informa que a página utiliza HTML5. -->
+
+<html lang="pt-br">
+<!-- Define o idioma da página como português brasileiro. -->
+
+<head>
+<!-- Guarda as configurações da página. -->
+
+    <!-- Permite mostrar acentos e caracteres especiais. -->
+<meta charset="UTF-8">
+
+    <!-- Adapta a página ao tamanho da tela do celular ou computador. -->
+<!-- initial-scale=1.0 mantém o tamanho normal da página. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparece na aba do navegador. -->
+<title>ARO - Seu futuro financeiro</title>
+
+    <!-- Conecta o arquivo landing.css ao HTML. -->
+<!-- Se o caminho estiver errado, a página fica sem esse estilo. -->
+<link rel="stylesheet" href="static/css/landing.css">
+</head>
+
+<body>
+<!-- Começa tudo o que aparece na página. -->
+
+
+    <!-- ========================================== -->
+<!-- CABEÇALHO -->
+<!-- ========================================== -->
+
+    <!-- header cria a parte superior do site. -->
+<header>
+
+        <!-- nav agrupa os links do menu. -->
+<nav>
+
+            <!-- Mostra o nome ARO como título principal. -->
+<h1>ARO</h1>
+
+            <!-- Agrupa os links para organizar pelo CSS. -->
+<div class="menu">
+
+                <!-- Ao clicar, vai para a parte com id="inicio". -->
+<a href="#inicio">Para você</a>
+
+                <!-- Vai para a parte de soluções da página. -->
+<a href="#solucoes">Soluções</a>
+
+                <!-- Vai para a parte de segurança. -->
+<a href="#seguranca">Segurança</a>
+
+                <!-- Vai para a parte de praticidade. -->
+<a href="#praticidade">Praticidade</a>
+
+                <!-- Abre a página de cadastro. -->
+<!-- A classe entrar controla a aparência no CSS. -->
+<a href="/login" class="entrar">Entrar</a>
+
+            </div>
+<!-- Termina o menu. -->
+
+        </nav>
+<!-- Termina a navegação. -->
+
+        <!-- Mostra o aviso do projeto abaixo do menu. -->
+<!-- A classe aviso controla cor, tamanho e posição no CSS. -->
+<p class="aviso">
+
+            AMBIENTE ACADÊMICO - PROJETO EXPERIMENTAL 2026
+</p>
+
+    </header>
+<!-- Termina o cabeçalho. -->
+
+
+    <!-- ========================================== -->
+<!-- CONTEÚDO PRINCIPAL -->
+<!-- ========================================== -->
+
+    <!-- main agrupa as partes principais do site. -->
+<main>
+
+
+        <!-- ========================================== -->
+<!-- INÍCIO -->
+<!-- ========================================== -->
+
+        <!-- section cria uma parte da página. -->
+<!-- class="inicio" permite colocar estilos pelo CSS. -->
+<!-- id="inicio" permite chegar aqui pelo link #inicio. -->
+<section class="inicio" id="inicio">
+
+            <!-- Agrupa os textos e o botão dessa parte. -->
+<div class="conteudo">
+
+                <!-- Cria uma pequena etiqueta acima do título. -->
+<span class="etiqueta">
+
+                    Conta para empreendedores
+</span>
+
+                <!-- h2 cria um título. -->
+<!-- O tamanho pode ser alterado no CSS. -->
+<h2>
+
+                    Mais controle para o seu
+
+                    futuro financeiro.
+</h2>
+
+                <!-- p cria um parágrafo de texto. -->
+<p>
+
+                    No ARO, você acompanha seus gastos,
+
+                    organiza suas finanças e conquista
+
+                    seus objetivos com segurança e praticidade.
+</p>
+
+                <!-- Cria um link com aparência de botão. -->
+<!-- href="/cadastro" abre a página de cadastro. -->
+<!-- class="botao" controla o visual no CSS. -->
+<a href="/login" class="botao">Login →</a>
+
+            </div>
+<!-- Termina o conteúdo de texto. -->
+
+            <!-- Mostra a imagem principal do notebook. -->
+<!-- src indica o caminho da imagem. -->
+<!-- alt descreve a imagem se ela não aparecer. -->
+<!-- Se mudar o caminho para um arquivo errado, ela não carrega. -->
+    <img src="{{ url_for('static', filename='uploads/pc-landing-page.png') }}" alt="Pc do sistema">
+
+        </section>
+<!-- Termina a primeira parte da página. -->
+
+
+        <!-- ========================================== -->
+<!-- SOLUÇÕES -->
+<!-- ========================================== -->
+
+        <!-- Cria a parte que apresenta os serviços do ARO. -->
+<!-- id="solucoes" permite abrir essa parte pelo menu. -->
+<section class="solucoes" id="solucoes">
+
+            <!-- Texto que aparece acima do título. -->
+<p>Por que escolher o ARO?</p>
+
+            <!-- Título principal dessa parte. -->
+<h2>
+
+                <!-- br faz o texto continuar na linha de baixo. -->
+
+                Tudo o que você precisa para gerenciar<br>
+
+                seu dinheiro, em um só lugar.
+
+            </h2>
+
+            <!-- Texto explicando as soluções do projeto. -->
+<p>
+
+                Oferecemos soluções simples e seguras
+
+                para você ter mais liberdade e tranquilidade
+
+                no seu dia a dia.
+</p>
+
+
+            <!-- ========================================== -->
+<!-- CARDS DAS SOLUÇÕES -->
+<!-- ========================================== -->
+
+            <!-- Agrupa os quatro cards. -->
+<!-- O CSS decide se ficam lado a lado ou um abaixo do outro. -->
+<div class="cards">
+
+
+                <!-- ========================================== -->
+<!-- CARD 1 - CONTA DIGITAL -->
+<!-- ========================================== -->
+
+                <!-- Cria o primeiro card. -->
+<div class="card">
+
+                    <!-- Mostra o ícone do celular. -->
+<!-- class="icone-img" controla seu tamanho pelo CSS. -->
+    <img src="{{ url_for('static', filename='uploads/conta_digital.png') }}" alt="Conta Digital">
+
+                    <!-- Título do primeiro card. -->
+<h3>Conta digital completa</h3>
+
+                    <!-- Descrição do primeiro card. -->
+<p>
+
+                        Abra sua conta em minutos e
+
+                        tenha tudo pelo celular.
+</p>
+
+                </div>
+<!-- Termina o primeiro card. -->
+
+
+                <!-- ========================================== -->
+<!-- CARD 2 - CARTÃO -->
+<!-- ========================================== -->
+
+                <!-- Cria o segundo card. -->
+<div class="card">
+
+                    <!-- Mostra o ícone do cartão. -->
+    <img src="{{ url_for('static', filename='uploads/cartao_sem_anuidade.png') }}" alt="Cartão sem anuidade">
+
+                    <!-- Título do segundo card. -->
+<h3>Cartão sem anuidade</h3>
+
+                    <!-- Descrição do segundo card. -->
+<p>
+
+                        Mais praticidade e liberdade
+
+                        para o seu dia a dia.
+</p>
+
+                </div>
+<!-- Termina o segundo card. -->
+
+
+                <!-- ========================================== -->
+<!-- CARD 3 - SEGURANÇA -->
+<!-- ========================================== -->
+
+                <!-- Cria o terceiro card. -->
+<div class="card">
+
+                    <!-- Mostra o ícone de segurança. -->
+    <img src="{{ url_for('static', filename='uploads/seguranca_avancada.png') }}" alt="Segurança Avançada ">
+
+                    <!-- Título do terceiro card. -->
+<h3>Segurança avançada</h3>
+
+                    <!-- Descrição do terceiro card. -->
+<p>
+
+                        Seus dados e seu dinheiro
+
+                        sempre protegidos.
+</p>
+
+                </div>
+<!-- Termina o terceiro card. -->
+
+
+                <!-- ========================================== -->
+<!-- CARD 4 - SUPORTE -->
+<!-- ========================================== -->
+
+                <!-- Cria o quarto card. -->
+<div class="card">
+
+                    <!-- Mostra o ícone de suporte. -->
+    <img src="{{ url_for('static', filename='uploads/suporte.png') }}" alt="Suporte 24/7">
+
+                    <!-- Título do quarto card. -->
+<h3>Suporte 24/7</h3>
+
+                    <!-- Descrição do quarto card. -->
+<p>
+
+                        Estamos sempre aqui
+
+                        para te ajudar.
+</p>
+
+                </div>
+<!-- Termina o quarto card. -->
+
+            </div>
+<!-- Termina a área dos cards. -->
+
+        </section>
+<!-- Termina a parte de soluções. -->
+
+
+        <!-- ========================================== -->
+<!-- SEGURANÇA -->
+<!-- ========================================== -->
+
+        <!-- Cria a parte de segurança do site. -->
+<!-- id="seguranca" permite navegar até aqui pelo menu. -->
+<section class="seguranca" id="seguranca">
+
+            <!-- Mostra a imagem da parte de segurança. -->
+    <img src="{{ url_for('static', filename='uploads/seguranca_aro.png') }}" alt="Segurança ARO">
+
+            <!-- Agrupa os textos ao lado da imagem. -->
+<div>
+
+                <!-- Título pequeno da seção. -->
+<h4>SEGURANÇA</h4>
+
+                <!-- Título maior da parte de segurança. -->
+<h2>
+
+                    Seus dados e seu dinheiro
+
+                    sempre protegidos.
+</h2>
+
+                <!-- Texto explicativo dessa parte. -->
+<p>
+
+                    Utilizamos as mais modernas tecnologias
+
+                    de segurança para garantir que suas
+
+                    informações e transações estejam sempre
+
+                    protegidas, 24 horas por dia.
+</p>
+
+            </div>
+<!-- Termina o conteúdo de texto. -->
+
+        </section>
+<!-- Termina a parte de segurança. -->
+
+
+        <!-- ========================================== -->
+<!-- PRATICIDADE -->
+<!-- ========================================== -->
+
+        <!-- Cria a parte que apresenta a praticidade do ARO. -->
+<section class="praticidade" id="praticidade">
+
+            <!-- Agrupa os textos dessa parte. -->
+<div>
+
+                <!-- Título pequeno da seção. -->
+<h4>PRATICIDADE</h4>
+
+                <!-- Título principal da seção. -->
+<h2>
+
+                    Tudo na palma da sua mão.
+</h2>
+
+                <!-- Texto que explica a praticidade. -->
+<p>
+
+                    Acesse sua conta, faça transferências,
+
+                    pague contas e acompanhe seus gastos,
+
+                    de onde estiver.
+</p>
+
+            </div>
+<!-- Termina a área de texto. -->
+
+            <!-- Mostra a imagem do celular. -->
+    <img src="{{ url_for('static', filename='uploads/celular-landing-page.png') }}" alt="Aplicativo ARO">
+
+        </section>
+<!-- Termina a parte de praticidade. -->
+
+
+        <!-- ========================================== -->
+<!-- CHAMADA FINAL -->
+<!-- ========================================== -->
+
+        <!-- Cria a parte final que convida o usuário a se cadastrar. -->
+<section class="final">
+
+            <!-- Agrupa os textos da chamada final. -->
+<div>
+
+                <!-- Título principal da chamada final. -->
+<h2>
+
+                    PRONTO PARA LEVAR SEU
+
+                    DINHEIRO MAIS LONGE?
+</h2>
+
+                <!-- Texto explicando o convite. -->
+<p>
+
+                    Abra sua conta para empreendedores
+
+                    e comece a fazer suas finanças com o ARO.
+</p>
+
+            </div>
+<!-- Termina os textos. -->
+
+            <!-- Cria um botão que abre o cadastro. -->
+<!-- class="botao-final" controla o visual no CSS. -->
+<a href="/login" class="botao-final">
+
+                Começar agora →
+</a>
+
+        </section>
+<!-- Termina a chamada final. -->
+
+    </main>
+<!-- Termina o conteúdo principal da página. -->
+
+
+    <!-- ========================================== -->
+<!-- RODAPÉ -->
+<!-- ========================================== -->
+
+    <!-- footer cria a parte inferior do site. -->
+<footer>
+
+        <!-- Agrupa os links do rodapé. -->
+<div class="links">
+
+            <!-- Volta para a parte inicial da página. -->
+<a href="#inicio">Para você</a>
+
+            <!-- Vai para a parte das soluções. -->
+<a href="#solucoes">Soluções</a>
+
+            <!-- Vai para a parte de segurança. -->
+<a href="#seguranca">Segurança</a>
+
+            <!-- Vai para a parte de praticidade. -->
+<a href="#praticidade">Praticidade</a>
+
+        </div>
+<!-- Termina os links do rodapé. -->
+
+        <!-- Mostra o texto sobre termos e privacidade. -->
+<p>
+
+            Termos de uso | Política de privacidade
+</p>
+
+        <!-- Mostra o texto de direitos autorais. -->
+<!-- O símbolo © representa direitos autorais. -->
+<h4>
+
+            © 2026 ARO. Todos os direitos reservados.
+</h4>
+
+    </footer>
+<!-- Termina o rodapé. -->
+
+</body>
+<!-- Termina a parte visível da página. -->
+
+</html>
+<!-- Termina o arquivo HTML. -->
+
